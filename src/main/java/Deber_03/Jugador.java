@@ -56,7 +56,7 @@ public class Jugador extends Mostrar {
 
     @Override
     public String mostrarInfo() {
-        return "El jugador " + this.getNombre() + ", nacion en el año " + this.getFechaNacimiento()
+        return "El jugador " + this.getNombre() + ", nacio en el año " + this.getFechaNacimiento()
                 + ", juega en el equipo " + this.getPlantilla().getNombre()
                 + ", ocupando la posicion de " + this.getPosicion();
     }

@@ -58,7 +58,7 @@ public class Personaje extends Mostrar {
 
     @Override
     public String mostrarInfo() {
-        return "El personaje del " + this.getNombrePersonaje()
+        return "El personaje de " + this.getNombrePersonaje()
                 + " participa en la pelicula de nombre " + this.getFilm().getPelicula()
                 + " y el actor que le da vida al personaje es " + this.getInterprete().getNombre();
     }

@@ -8,7 +8,8 @@ package Deber_03;
  *
  * @author Juano
  */
-public class Auto extends Mostrar{
+public class Auto extends Mostrar {
+
     private String marca;
     private String modelo;
     private String placa;
@@ -27,29 +28,35 @@ public class Auto extends Mostrar{
         this.precio = precio;
     }
 
-    public String getProvincia(){
+    public String getProvincia() {
         var retorno = "";
-        var primeraLetra="";
-        primeraLetra=this.placa.substring(0,1);
-        switch(primeraLetra){
+        var primeraLetra = "";
+        primeraLetra = this.placa.substring(0, 1);
+        switch (primeraLetra) {
             case "A":
-                retorno="Azuay";
+                retorno = "Azuay";
                 break;
-           case "P":
-                retorno="Pichincha";
+            case "B":
+                retorno = "Bolivar";
                 break;
-           case "G":
-                retorno="Guayas";
+            case "C":
+                retorno = "Carchi";
                 break;
             case "U":
-                retorno="Cañar";
+                retorno = "Cañar";
+                break;
+            case "P":
+                retorno = "Pichincha";
+                break;
+                case "R":
+                retorno = "Los Rios";
                 break;
             default:
-                retorno="Provincia no definida";
+                retorno = "Provincia no definida";
         }
         return retorno;
     }
-            
+
     public String getModelo() {
         return modelo;
     }
@@ -57,8 +64,6 @@ public class Auto extends Mostrar{
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-
-    
 
     public String getMarca() {
         return marca;
@@ -108,14 +113,13 @@ public class Auto extends Mostrar{
         this.precio = precio;
     }
 
-    
     @Override
     public String mostrarInfo() {
-       return "las caracteristicas de dicho auto son: marca "+this.getMarca()+
-               ", su color es "+this.getColor()+", su numero de placa es "+
-               this.getPlaca()+" basado en esto su provincia es "
-               +this.getProvincia()+", el tipo de combustible que utiliza es "+
-               this.getTipoCombustible()+", su año de fabricacion es "+
-               this.getYear()+" y su precio es de "+this.getPrecio()+" dolares";
+        return "las caracteristicas de dicho auto son: marca " + this.getMarca()
+                + ", su color es " + this.getColor() + ", su numero de placa es "
+                + this.getPlaca() + " basado en esto su provincia es "
+                + this.getProvincia() + ", el tipo de combustible que utiliza es "
+                + this.getTipoCombustible() + ", su año de fabricacion es "
+                + this.getYear() + " y su precio es de " + this.getPrecio() + " dolares";
     }
 }
