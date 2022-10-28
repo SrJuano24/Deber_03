@@ -47,6 +47,38 @@ public class Principal {
         System.out.println(padrino1.mostrarInfo());
         System.out.println(padrino.mostrarInfo());
         System.out.println("");
+        
+        
+        
+        var tri= new Equipo("Federacion Ecuatoriana de Futbol","Gustavo Alfaro",1925);
+        var argentina = new Equipo("Asociación del Fútbol Argentino","Lionel Scaloni",1893);
+        var cuba=new Equipo("Asociación de Fútbol de Cuba","Julio Valero Mederos",1924);
+        
+        
+        var ecuador=new Pais("ECU","Ecuador",0,"Conmebol",tri);
+        var eargentina=new Pais("AFA","Argentina",21,"Conmebol",argentina);
+        var ecuba=new Pais("FMC","Cuba",12,"Concacaf",cuba);
+        
+        var plata=new Jugador("Gonzalo Plata",2000,"Delantero",tri);
+        var messi= new Jugador("Lionel Messi",1987,"Delantero",argentina);
+        var paradela=new Jugador("Luis Paradela",1997,"Delantero",cuba);
+         
+        System.out.println(plata.mostrarInfo());
+        System.out.println(tri.mostrarInfo());
+        System.out.println(ecuador.mostrarInfo());
+        System.out.println("");
+        
+        System.out.println(messi.mostrarInfo());
+        System.out.println(eargentina.mostrarInfo());
+        System.out.println(argentina.mostrarInfo());
+        System.out.println("");
+        
+        System.out.println(paradela.mostrarInfo());
+        System.out.println(ecuba.mostrarInfo());
+        System.out.println(cuba.mostrarInfo());
+        System.out.println("");
+        
+        
     }
 
 }
