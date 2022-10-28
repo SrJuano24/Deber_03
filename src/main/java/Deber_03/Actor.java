@@ -22,6 +22,8 @@ public class Actor extends Mostrar {
         this.nombre = no;
     }
 
+   
+    
     public int getFechaNacimiento() {
         return fechaNacimiento;
     }
@@ -57,8 +59,9 @@ public class Actor extends Mostrar {
     @Override
     public String mostrarInfo() {
         return "quien nació en "
-                + this.getLugarNacimiento() + " en la fecha de " + this.getFechaNacimiento()
-                + " y tiene " + this.getNominaciones() + " nominaciones a un premio Oscar";
+                + this.getLugarNacimiento() + " en la fecha de " + 
+                this.getFechaNacimiento() + " y tiene " + this.getNominaciones()
+                + " nominaciones a un premio Oscar";
     }
 
 }

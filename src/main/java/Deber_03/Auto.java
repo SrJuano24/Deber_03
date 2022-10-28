@@ -27,6 +27,29 @@ public class Auto extends Mostrar{
         this.precio = precio;
     }
 
+    public String getProvincia(){
+        var retorno = "";
+        var primeraLetra="";
+        primeraLetra=this.placa.substring(0,1);
+        switch(primeraLetra){
+            case "A":
+                retorno="Azuay";
+                break;
+           case "P":
+                retorno="Pichincha";
+                break;
+           case "G":
+                retorno="Guayas";
+                break;
+            case "U":
+                retorno="Cañar";
+                break;
+            default:
+                retorno="Provincia no definida";
+        }
+        return retorno;
+    }
+            
     public String getModelo() {
         return modelo;
     }
@@ -90,7 +113,8 @@ public class Auto extends Mostrar{
     public String mostrarInfo() {
        return "las caracteristicas de dicho auto son: marca "+this.getMarca()+
                ", su color es "+this.getColor()+", su numero de placa es "+
-               this.getPlaca()+", el tipo de combustible que utiliza es "+
+               this.getPlaca()+" basado en esto su provincia es "
+               +this.getProvincia()+", el tipo de combustible que utiliza es "+
                this.getTipoCombustible()+", su año de fabricacion es "+
                this.getYear()+" y su precio es de "+this.getPrecio()+" dolares";
     }

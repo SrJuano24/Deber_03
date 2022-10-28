@@ -24,6 +24,23 @@ public class Pelicula extends Mostrar {
         this.duracion = d;
 
     }
+    public String getClasificacionEdad(){
+        var retorno ="Desconocido";
+        switch (clasificacion) {
+            case "A":
+                retorno="es para todo tipo de publico";
+                break;
+                case "B":
+                retorno="es para niños con compañia de adultos";
+                break;
+                case "C":
+                retorno="es para mayores de edad";
+                break;
+            default:
+                throw new AssertionError();
+        }
+       return retorno;
+    }
 
     public String getPelicula() {
         return pelicula;
@@ -70,6 +87,7 @@ public class Pelicula extends Mostrar {
         return "Esta pelicula se estreno en el año " + this.getYearLanzamiento()
                 + ", el idioma en la que viene es " + this.getIdioma()
                 + ", su clasificacion es: " + this.getClasificacion()
+                +" esto implica que la pelicula "+this.getClasificacionEdad()
                 + " y su duracion es " + this.duracion + " horas.";
 
     }
